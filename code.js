@@ -2,14 +2,12 @@ function divideAndConquerSum(a) {
     return recur(a);
 }
 
-// Going for a base case of either 1 or 2 length array, otherwise recur.
+// Going for a base case of either 0 or 1 length array, otherwise recur.
 function recur(a) {
     if (a.length === 0) {
         return 0;
     } else if (a.length === 1) {
         return a[0];
-    } else if (a.length === 2) {
-        return a[0] + a[1];
     }
 
     const cutSize = Math.ceil(a.length/3);
